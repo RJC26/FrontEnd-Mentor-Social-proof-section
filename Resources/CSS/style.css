@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'League Spartan', sans-serif;
+}
+:root{
+    /* Primary */
+    --bg-buyer-box: hsl(301, 45%, 22%);
+    --text-h1: hsl(308, 46%, 23%);
+    --text-verified: hsl(333, 80%, 67%);
+    /* Neutral */
+    --Light-Grayish-Magenta: hsl(290, 30%, 96%);
+    --stars: hsl(29, 86%, 62%);
+    --White: hsl(0, 0%, 100%);
+    --text-white-bg: hsl(313, 10%, 46%);
+    --bg-rating-box: hsl(300, 6%, 68%);
+}
+body{
+    display: grid;
+    place-items: center;
+    background-image: url(../Images/bg-pattern-top-mobile.svg), url(../Images/bg-pattern-bottom-mobile.svg);
+    background-position: top, bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+main{
+    width: 85%;
+    text-align: center;
+}
+section{
+    margin: 4rem 0;
+}
+/* Text Section */
+.main-text h1{
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-h1);
+}
+.main-text p{
+    font-size: 1.3rem;
+    color: var(--text-white-bg);
+    margin: 2rem 0;
+}
+/* Rating boxes */
+.rating{
+    width: 100%;
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 10px;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+.rating h2{
+    color: var(--text-h1);
+    margin-top: 1rem;
+}
+/* Cards */
+.card{
+    background-color: var(--bg-buyer-box);
+    border-radius: 10px;
+    padding: 2.5rem 3rem;
+    color: var(--White);
+    text-align: left;
+    margin: 1rem 0;
+}
+.image-name{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.avatar-image{
+    height: 3rem;
+    width: auto;
+    border-radius: 50%;
+}
+.verified{
+    font-weight: 400;
+    color: var(--text-verified);
+    margin-top: 0.3rem;
+}
+.card-text{
+    font-size: 1.2rem;
+    word-spacing: 2px;
+    line-height: 1.7rem;
+}
+
+
+@media only screen and (min-width: 800px){
+    body{
+        height: 100vh;
+        overflow: hidden;
+        margin-top: 2rem;
+        background-image: url(../Images/bg-pattern-top-desktop.svg), url(../Images/bg-pattern-bottom-desktop.svg);
+        background-position: top left, bottom right;
+        background-repeat: no-repeat, no-repeat;
+        background-size: auto, auto;
+    }
+    main{
+        width: 100%;
+        text-align: left;
+    }
+    .main-text{
+        width: 35%;
+        padding: 0 3rem;
+    }
+    .main-text p{
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+    .main-rating{
+        width: 65%;
+    }
+    .rating{
+        display: flex;
+        align-items: center;
+        width: 63%;
+        margin-left: 13rem;
+    }
+    .main-rating> :nth-child(2){
+        margin-left: 15rem;
+    }
+    .main-rating> :last-child{
+        margin-left: 17rem;
+    }
+    .rating h2{
+        margin: 0 0 0 auto;
+        padding-right: 1rem;
+    }
+    .rating img{
+        margin: 0 .5rem;
+        height: 1.2rem;
+        width: auto;
+    }
+    .text-rating{
+        display: flex;
+    }
+    
+    .card-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+    .card-section> div:last-child{
+        margin-top: 5rem;
+    }
+    .card-section> div:nth-child(2){
+        margin-top: 3rem;
+    }
+    .card{
+        width: 30%;
+        padding: 2rem 1.5rem;
+        margin-right: 1.5em;
+    }
+    section{
+        margin: -2rem 0;
+    }
+}
+
+
